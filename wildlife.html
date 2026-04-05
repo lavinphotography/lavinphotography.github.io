@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wildlife — Lavin Photography</title>
+  <meta name="description" content="Wildlife photography by Lavin — owls, hummingbirds, loons, cranes, India and Kenya." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">Lavin<span>.</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="landscapes.html">Landscapes</a>
+    <a href="cityscapes.html">Cityscapes</a>
+    <div class="nav-dropdown">
+      <a href="wildlife.html" class="active">Wildlife</a>
+      <div class="dropdown-menu">
+        <a href="#owls">Owls</a>
+        <a href="#hummingbirds">Hummingbirds</a>
+        <a href="#loons">Loons</a>
+        <a href="#cranes">Cranes</a>
+        <a href="#india">India</a>
+        <a href="#kenya">Kenya</a>
+      </div>
+    </div>
+    <a href="search.html">Search</a>
+    <a href="contact.html">Contact</a>
+    <a href="prints.html" class="nav-cta">Shop Prints</a>
+  </nav>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="landscapes.html">Landscapes</a>
+  <a href="cityscapes.html">Cityscapes</a>
+  <a href="wildlife.html">Wildlife</a>
+  <a class="mobile-sub" href="#owls">↳ Owls</a>
+  <a class="mobile-sub" href="#hummingbirds">↳ Hummingbirds</a>
+  <a class="mobile-sub" href="#loons">↳ Loons</a>
+  <a class="mobile-sub" href="#cranes">↳ Cranes</a>
+  <a class="mobile-sub" href="#india">↳ India</a>
+  <a class="mobile-sub" href="#kenya">↳ Kenya</a>
+  <a href="search.html">Search</a>
+  <a href="contact.html">Contact</a>
+  <a href="prints.html">Shop Prints</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="margin-top: var(--nav-height);">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1548267904-5b2cd66bb748?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="section-label" style="margin-bottom:0.5rem;">Gallery</p>
+    <h1 class="page-hero">Wildlife</h1>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+
+    <!-- FILTER PILLS -->
+    <div class="pill-nav reveal">
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="owls">Owls</button>
+      <button class="pill" data-filter="hummingbirds">Hummingbirds</button>
+      <button class="pill" data-filter="loons">Loons</button>
+      <button class="pill" data-filter="cranes">Cranes</button>
+      <button class="pill" data-filter="india">India</button>
+      <button class="pill" data-filter="kenya">Kenya</button>
+    </div>
+
+    <!-- OWLS -->
+    <div id="owls" style="scroll-margin-top: calc(var(--nav-height) + 1.5rem);">
+      <p class="section-label reveal">Owls</p>
+      <h2 class="section-title reveal">Minnesota's <em>Apex Hunters</em></h2>
+      <div class="divider reveal"></div>
+    </div>
+
+    <div class="gallery-grid reveal" style="margin-top:2rem;">
+      <div class="item" data-category="owls" data-lightbox="https://images.unsplash.com/photo-1548267904-5b2cd66bb748?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1548267904-5b2cd66bb748?w=900&q=80" alt="Great Horned Owl" loading="lazy" />
+        <div class="item-label">Great Horned Owl</div>
+      </div>
+      <div class="item" data-category="owls" data-lightbox="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?w=600&q=80" alt="Snowy Owl" loading="lazy" />
+        <div class="item-label">Snowy Owl</div>
+      </div>
+      <div class="item" data-category="owls" data-lightbox="https://images.unsplash.com/photo-1543946602-a0fce8117697?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1543946602-a0fce8117697?w=600&q=80" alt="Eastern Screech-Owl" loading="lazy" />
+        <div class="item-label">Eastern Screech-Owl</div>
+      </div>
+    </div>
+
+    <!-- HUMMINGBIRDS -->
+    <div id="hummingbirds" style="margin-top:5rem; scroll-margin-top: calc(var(--nav-height) + 1.5rem);">
+      <p class="section-label reveal">Hummingbirds</p>
+      <h2 class="section-title reveal">Wings in <em>Perpetual Motion</em></h2>
+      <div class="divider reveal"></div>
+    </div>
+
+    <div class="gallery-grid reveal" style="margin-top:2rem;">
+      <div class="item" data-category="hummingbirds" data-lightbox="https://images.unsplash.com/photo-1569388330292-79cc1ec67270?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1569388330292-79cc1ec67270?w=900&q=80" alt="Hummingbird" loading="lazy" />
+        <div class="item-label">Ruby-throated Hummingbird</div>
+      </div>
+      <div class="item" data-category="hummingbirds" data-lightbox="https://images.unsplash.com/photo-1444215011049-3adef4fd4eda?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1444215011049-3adef4fd4eda?w=600&q=80" alt="Rufous Hummingbird" loading="lazy" />
+        <div class="item-label">Rufous Hummingbird</div>
+      </div>
+      <div class="item" data-category="hummingbirds" data-lightbox="https://images.unsplash.com/photo-1444215011049-3adef4fd4eda?w=800&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1444215011049-3adef4fd4eda?w=600&q=80" alt="Hummingbird in Flight" loading="lazy" />
+        <div class="item-label">In Flight</div>
+      </div>
+    </div>
+
+    <!-- LOONS -->
+    <div id="loons" style="margin-top:5rem; scroll-margin-top: calc(var(--nav-height) + 1.5rem);">
+      <p class="section-label reveal">Loons</p>
+      <h2 class="section-title reveal">The <em>Voice of the Lakes</em></h2>
+      <div class="divider reveal"></div>
+    </div>
+
+    <div class="gallery-grid reveal" style="margin-top:2rem;">
+      <div class="item" data-category="loons" data-lightbox="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=900&q=80" alt="Common Loon" loading="lazy" />
+        <div class="item-label">Common Loon</div>
+      </div>
+      <div class="item" data-category="loons" data-lightbox="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=600&q=80" alt="Loon at Sunset" loading="lazy" />
+        <div class="item-label">Sunset Call</div>
+      </div>
+      <div class="item" data-category="loons" data-lightbox="https://images.unsplash.com/photo-1498854862053-a52f4f9fa617?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1498854862053-a52f4f9fa617?w=600&q=80" alt="Loon Diving" loading="lazy" />
+        <div class="item-label">The Dive</div>
+      </div>
+    </div>
+
+    <!-- CRANES -->
+    <div id="cranes" style="margin-top:5rem; scroll-margin-top: calc(var(--nav-height) + 1.5rem);">
+      <p class="section-label reveal">Cranes</p>
+      <h2 class="section-title reveal">Ancient <em>Elegance</em></h2>
+      <div class="divider reveal"></div>
+    </div>
+
+    <div class="gallery-grid reveal" style="margin-top:2rem;">
+      <div class="item" data-category="cranes" data-lightbox="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=900&q=80" alt="Sandhill Crane" loading="lazy" />
+        <div class="item-label">Sandhill Crane</div>
+      </div>
+      <div class="item" data-category="cranes" data-lightbox="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=600&q=80" alt="Crane in Flight" loading="lazy" />
+        <div class="item-label">In Flight</div>
+      </div>
+      <div class="item" data-category="cranes" data-lightbox="https://images.unsplash.com/photo-1498854862053-a52f4f9fa617?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1498854862053-a52f4f9fa617?w=600&q=80" alt="Crane at Dawn" loading="lazy" />
+        <div class="item-label">Prairie Dawn</div>
+      </div>
+    </div>
+
+    <!-- INDIA -->
+    <div id="india" style="margin-top:5rem; scroll-margin-top: calc(var(--nav-height) + 1.5rem);">
+      <p class="section-label reveal">India</p>
+      <h2 class="section-title reveal">Subcontinent <em>Wild</em></h2>
+      <div class="divider reveal"></div>
+    </div>
+
+    <div class="gallery-grid reveal" style="margin-top:2rem;">
+      <div class="item" data-category="india" data-lightbox="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=900&q=80" alt="Indian Tiger" loading="lazy" />
+        <div class="item-label">Bengal Tiger</div>
+      </div>
+      <div class="item" data-category="india" data-lightbox="https://images.unsplash.com/photo-1581329979405-ec0f2f3f3b2c?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1581329979405-ec0f2f3f3b2c?w=600&q=80" alt="Indian Landscape" loading="lazy" />
+        <div class="item-label">Ranthambore Reserve</div>
+      </div>
+      <div class="item" data-category="india" data-lightbox="https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?w=600&q=80" alt="Indian Bird" loading="lazy" />
+        <div class="item-label">Indian Roller</div>
+      </div>
+    </div>
+
+    <!-- KENYA -->
+    <div id="kenya" style="margin-top:5rem; scroll-margin-top: calc(var(--nav-height) + 1.5rem);">
+      <p class="section-label reveal">Kenya</p>
+      <h2 class="section-title reveal">Savanna <em>at the Edge of Light</em></h2>
+      <div class="divider reveal"></div>
+    </div>
+
+    <div class="gallery-grid reveal" style="margin-top:2rem; margin-bottom:2rem;">
+      <div class="item" data-category="kenya" data-lightbox="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=900&q=80" alt="African Elephant" loading="lazy" />
+        <div class="item-label">Amboseli Elephant</div>
+      </div>
+      <div class="item" data-category="kenya" data-lightbox="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=600&q=80" alt="Lion" loading="lazy" />
+        <div class="item-label">Masai Mara Lion</div>
+      </div>
+      <div class="item" data-category="kenya" data-lightbox="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=85" style="cursor:pointer;">
+        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80" alt="Cheetah" loading="lazy" />
+        <div class="item-label">Cheetah on the Hunt</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRINTS CTA BANNER -->
+<section class="prints-banner">
+  <p class="section-label">Fine Art Prints</p>
+  <h2 class="section-title">Own a Piece of the <em>Wild</em></h2>
+  <p class="section-desc">Every wildlife image is available as a museum-quality fine art print, personally signed and reviewed.</p>
+  <div style="height:1.5rem;"></div>
+  <a href="prints.html" class="btn-primary">Shop Print Collection</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">Lavin<span>.</span></a>
+      <p>Fine art nature and wildlife photography from Minnesota and across the globe.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Gallery</h4>
+      <a href="landscapes.html">Landscapes</a>
+      <a href="cityscapes.html">Cityscapes</a>
+      <a href="wildlife.html">Wildlife</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wildlife</h4>
+      <a href="#owls">Owls</a>
+      <a href="#hummingbirds">Hummingbirds</a>
+      <a href="#loons">Loons</a>
+      <a href="#cranes">Cranes</a>
+      <a href="#india">India</a>
+      <a href="#kenya">Kenya</a>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <a href="prints.html">Shop Prints</a>
+      <a href="search.html">Search</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Lavin Photography. All rights reserved.</span>
+    <div class="social-links">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox-overlay">
+  <button class="lightbox-close" aria-label="Close">✕</button>
+  <img src="" alt="Full size preview" />
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

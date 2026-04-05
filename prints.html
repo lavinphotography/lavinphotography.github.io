@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Prints — Lavin Photography</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .prints-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .print-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .print-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+    .print-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; filter: brightness(0.9); transition: filter 0.3s; }
+    .print-card:hover img { filter: brightness(1); }
+    .print-card-body { padding: 1.2rem 1.4rem 1.5rem; }
+    .print-card-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.3rem; }
+    .print-card-meta { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .print-card-price { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--accent); margin-bottom: 1rem; }
+    .print-sizes { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+    .size-badge { font-size: 0.62rem; letter-spacing: 0.1em; padding: 0.25rem 0.6rem; border: 1px solid var(--border); color: var(--text-muted); border-radius: 1px; }
+    .btn-buy { width: 100%; text-align: center; padding: 0.7rem; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; background: transparent; border: 1px solid var(--accent); color: var(--accent); cursor: pointer; transition: background 0.2s, color 0.2s; border-radius: 1px; font-family: 'Jost', sans-serif; }
+    .btn-buy:hover { background: var(--accent); color: var(--bg); }
+  </style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html">Lavin<span>.</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="landscapes.html">Landscapes</a>
+    <a href="cityscapes.html">Cityscapes</a>
+    <div class="nav-dropdown">
+      <a href="wildlife.html">Wildlife</a>
+      <div class="dropdown-menu">
+        <a href="wildlife.html#owls">Owls</a>
+        <a href="wildlife.html#hummingbirds">Hummingbirds</a>
+        <a href="wildlife.html#loons">Loons</a>
+        <a href="wildlife.html#cranes">Cranes</a>
+        <a href="wildlife.html#india">India</a>
+        <a href="wildlife.html#kenya">Kenya</a>
+      </div>
+    </div>
+    <a href="search.html">Search</a>
+    <a href="contact.html">Contact</a>
+    <a href="prints.html" class="nav-cta active">Shop Prints</a>
+  </nav>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="landscapes.html">Landscapes</a><a href="cityscapes.html">Cityscapes</a>
+  <a href="wildlife.html">Wildlife</a>
+  <a class="mobile-sub" href="wildlife.html#owls">↳ Owls</a><a class="mobile-sub" href="wildlife.html#hummingbirds">↳ Hummingbirds</a>
+  <a class="mobile-sub" href="wildlife.html#loons">↳ Loons</a><a class="mobile-sub" href="wildlife.html#cranes">↳ Cranes</a>
+  <a class="mobile-sub" href="wildlife.html#india">↳ India</a><a class="mobile-sub" href="wildlife.html#kenya">↳ Kenya</a>
+  <a href="search.html">Search</a><a href="contact.html">Contact</a><a href="prints.html">Shop Prints</a>
+</div>
+
+<div class="page-hero" style="margin-top: var(--nav-height);">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1548267904-5b2cd66bb748?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="section-label" style="margin-bottom:0.5rem;">Fine Art</p>
+    <h1>Shop Prints</h1>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label reveal">The Collection</p>
+    <h2 class="section-title reveal">Museum-Quality <em>Fine Art Prints</em></h2>
+    <div class="divider reveal"></div>
+    <p class="section-desc reveal">Each print is produced on premium archival paper using pigment inks that last over 100 years. Every order is personally reviewed and signed before shipping.</p>
+
+    <!-- Print quality callouts -->
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:1rem; margin-top:2.5rem;" class="reveal">
+      <div style="background:var(--bg-card); border:1px solid var(--border); padding:1.2rem; border-radius:2px;">
+        <div style="font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Material</div>
+        <div style="font-size:0.9rem; color:var(--text-primary);">Hahnemühle Fine Art Paper</div>
+      </div>
+      <div style="background:var(--bg-card); border:1px solid var(--border); padding:1.2rem; border-radius:2px;">
+        <div style="font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Ink</div>
+        <div style="font-size:0.9rem; color:var(--text-primary);">Archival Pigment, 100+ yr</div>
+      </div>
+      <div style="background:var(--bg-card); border:1px solid var(--border); padding:1.2rem; border-radius:2px;">
+        <div style="font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Signed</div>
+        <div style="font-size:0.9rem; color:var(--text-primary);">Every print, personally</div>
+      </div>
+      <div style="background:var(--bg-card); border:1px solid var(--border); padding:1.2rem; border-radius:2px;">
+        <div style="font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Shipping</div>
+        <div style="font-size:0.9rem; color:var(--text-primary);">Flat-packed, insured</div>
+      </div>
+    </div>
+
+    <!-- Prints Grid -->
+    <div class="prints-grid">
+      <div class="print-card reveal">
+        <img src="https://images.unsplash.com/photo-1548267904-5b2cd66bb748?w=700&q=80" alt="Great Horned Owl" loading="lazy" />
+        <div class="print-card-body">
+          <div class="print-card-title">Great Horned Owl</div>
+          <div class="print-card-meta">Wildlife · Owls</div>
+          <div class="print-card-price">From $95</div>
+          <div class="print-sizes">
+            <span class="size-badge">8×10</span>
+            <span class="size-badge">11×14</span>
+            <span class="size-badge">16×20</span>
+            <span class="size-badge">24×30</span>
+          </div>
+          <button class="btn-buy" onclick="window.location='contact.html'">Inquire / Purchase</button>
+        </div>
+      </div>
+      <div class="print-card reveal">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Alpenglow" loading="lazy" />
+        <div class="print-card-body">
+          <div class="print-card-title">Alpenglow</div>
+          <div class="print-card-meta">Landscapes</div>
+          <div class="print-card-price">From $85</div>
+          <div class="print-sizes">
+            <span class="size-badge">8×10</span>
+            <span class="size-badge">11×14</span>
+            <span class="size-badge">16×20</span>
+            <span class="size-badge">24×30</span>
+          </div>
+          <button class="btn-buy" onclick="window.location='contact.html'">Inquire / Purchase</button>
+        </div>
+      </div>
+      <div class="print-card reveal">
+        <img src="https://images.unsplash.com/photo-1569388330292-79cc1ec67270?w=700&q=80" alt="Hummingbird" loading="lazy" />
+        <div class="print-card-body">
+          <div class="print-card-title">Ruby-throated Hummingbird</div>
+          <div class="print-card-meta">Wildlife · Hummingbirds</div>
+          <div class="print-card-price">From $95</div>
+          <div class="print-sizes">
+            <span class="size-badge">8×10</span>
+            <span class="size-badge">11×14</span>
+            <span class="size-badge">16×20</span>
+          </div>
+          <button class="btn-buy" onclick="window.location='contact.html'">Inquire / Purchase</button>
+        </div>
+      </div>
+      <div class="print-card reveal">
+        <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=700&q=80" alt="Common Loon" loading="lazy" />
+        <div class="print-card-body">
+          <div class="print-card-title">Common Loon</div>
+          <div class="print-card-meta">Wildlife · Loons</div>
+          <div class="print-card-price">From $95</div>
+          <div class="print-sizes">
+            <span class="size-badge">8×10</span>
+            <span class="size-badge">11×14</span>
+            <span class="size-badge">16×20</span>
+            <span class="size-badge">24×30</span>
+          </div>
+          <button class="btn-buy" onclick="window.location='contact.html'">Inquire / Purchase</button>
+        </div>
+      </div>
+      <div class="print-card reveal">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80" alt="Minneapolis Skyline" loading="lazy" />
+        <div class="print-card-body">
+          <div class="print-card-title">Minneapolis Skyline</div>
+          <div class="print-card-meta">Cityscapes</div>
+          <div class="print-card-price">From $85</div>
+          <div class="print-sizes">
+            <span class="size-badge">11×14</span>
+            <span class="size-badge">16×20</span>
+            <span class="size-badge">24×30</span>
+          </div>
+          <button class="btn-buy" onclick="window.location='contact.html'">Inquire / Purchase</button>
+        </div>
+      </div>
+      <div class="print-card reveal">
+        <img src="https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=700&q=80" alt="Amboseli Elephant" loading="lazy" />
+        <div class="print-card-body">
+          <div class="print-card-title">Amboseli Elephant</div>
+          <div class="print-card-meta">Wildlife · Kenya</div>
+          <div class="print-card-price">From $110</div>
+          <div class="print-sizes">
+            <span class="size-badge">8×10</span>
+            <span class="size-badge">11×14</span>
+            <span class="size-badge">16×20</span>
+            <span class="size-badge">24×30</span>
+          </div>
+          <button class="btn-buy" onclick="window.location='contact.html'">Inquire / Purchase</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem; text-align:center;" class="reveal">
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.2rem;">Don't see a specific image? I can produce prints from any image in the gallery.</p>
+      <a href="contact.html" class="btn-ghost">Request a Custom Print</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><a class="logo" href="index.html">Lavin<span>.</span></a><p>Fine art nature and wildlife photography from Minnesota and across the globe.</p></div>
+    <div class="footer-col"><h4>Gallery</h4><a href="landscapes.html">Landscapes</a><a href="cityscapes.html">Cityscapes</a><a href="wildlife.html">Wildlife</a></div>
+    <div class="footer-col"><h4>Wildlife</h4><a href="wildlife.html#owls">Owls</a><a href="wildlife.html#hummingbirds">Hummingbirds</a><a href="wildlife.html#loons">Loons</a><a href="wildlife.html#cranes">Cranes</a><a href="wildlife.html#india">India</a><a href="wildlife.html#kenya">Kenya</a></div>
+    <div class="footer-col"><h4>Info</h4><a href="prints.html">Shop Prints</a><a href="search.html">Search</a><a href="contact.html">Contact</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Lavin Photography. All rights reserved.</span><div class="social-links"><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
