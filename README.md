@@ -42,3 +42,22 @@ Edit the CSS variables at the top of `css/style.css`:
 - `--accent` — the gold tone used throughout
 - `--bg` — page background
 - `--text-primary` — main text color
+
+## Wiring up the contact form (Formspree — free, recommended)
+
+1. Go to https://formspree.io and sign up free
+2. Create a new form, set the destination email to **contact@lavinphotography.com**
+3. Copy your Form ID (looks like `xpzvwkqb`)
+4. In `contact.html`, find `YOUR_FORM_ID` and replace it with your actual ID:
+   `action="https://formspree.io/f/xpzvwkqb"`
+5. That's it — submissions will go directly to your inbox
+
+Until Formspree is wired up, the form uses a `mailto:` fallback that opens the visitor's email client pre-filled.
+
+## Image protection notes
+
+- Right-click context menu is disabled on all images
+- CSS drag-to-save is blocked
+- Mobile long-press save is blocked
+- For strongest protection: serve only low-res (1000px) web copies; keep full-res files on your local drive
+- Consider adding visible watermarks in Lightroom before uploading

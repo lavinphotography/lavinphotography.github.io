@@ -51,7 +51,6 @@
 <section class="section">
   <div class="section-inner">
     <div class="contact-grid">
-      <!-- LEFT: Info -->
       <div>
         <p class="section-label reveal">Get in Touch</p>
         <h2 class="section-title reveal">Let's <em>Connect</em></h2>
@@ -60,24 +59,33 @@
 
         <div style="margin-top:2.5rem;" class="reveal">
           <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Email</p>
-          <p style="color:var(--text-primary); font-size:0.95rem;">contact@lavinphotography.com</p>
+          <a href="mailto:contact@lavinphotography.com" style="color:var(--text-primary); font-size:0.95rem; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-primary)'">contact@lavinphotography.com</a>
         </div>
         <div style="margin-top:1.5rem;" class="reveal">
           <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Based In</p>
           <p style="color:var(--text-primary); font-size:0.95rem;">Minnesota, USA</p>
         </div>
         <div style="margin-top:1.5rem;" class="reveal">
-          <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Follow</p>
-          <div class="social-links reveal" style="justify-content:flex-start;">
+          <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.8rem;">Follow</p>
+          <div class="social-links" style="justify-content:flex-start;">
             <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
             <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
           </div>
         </div>
+
+        <div style="margin-top:2.5rem; padding:1.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:2px;" class="reveal">
+          <p style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.6rem;">Print Inquiries</p>
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">To order a specific print, browse the gallery and click <strong style="color:var(--text-primary); font-weight:400;">"Buy This Print"</strong> on any image — it will pre-fill this form with the image details automatically.</p>
+        </div>
       </div>
 
-      <!-- RIGHT: Form -->
       <div class="reveal">
-        <form id="contact-form">
+        <!-- ACTION points to Formspree — replace YOUR_FORM_ID with your actual Formspree form ID -->
+        <!-- Until then, the JS handler below intercepts and shows a mailto fallback -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_replyto" value="contact@lavinphotography.com" />
+          <input type="hidden" name="_subject" id="hidden-subject" value="Photography Inquiry" />
+
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
             <div class="form-group">
               <label for="fname">First Name</label>
@@ -89,24 +97,30 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email">Your Email</label>
             <input id="email" type="email" name="email" placeholder="you@email.com" required />
           </div>
           <div class="form-group">
             <label for="subject">Subject</label>
             <select id="subject" name="subject">
-              <option value="">Select a topic</option>
-              <option value="print">Print Purchase Inquiry</option>
-              <option value="license">Image Licensing</option>
-              <option value="custom">Custom Print Request</option>
-              <option value="general">General Question</option>
+              <option value="Print Purchase Inquiry">Print Purchase Inquiry</option>
+              <option value="Image Licensing">Image Licensing</option>
+              <option value="Custom Print Request">Custom Print Request</option>
+              <option value="General Question">General Question</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me what you're looking for..." required></textarea>
+            <label for="image-ref">Image (if applicable)</label>
+            <input id="image-ref" type="text" name="image_reference" placeholder="e.g. Great Horned Owl, or leave blank" />
           </div>
-          <button type="submit" class="btn-primary" style="width:100%; text-align:center; cursor:pointer;">Send Message</button>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me what you're looking for — size, finish, framing preferences..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; text-align:center; cursor:pointer; font-family:inherit;">Send Message</button>
+          <p style="font-size:0.7rem; color:var(--text-muted); margin-top:0.8rem; text-align:center;">
+            Or email directly: <a href="mailto:contact@lavinphotography.com" style="color:var(--accent); text-decoration:none;">contact@lavinphotography.com</a>
+          </p>
         </form>
       </div>
     </div>
@@ -120,8 +134,43 @@
     <div class="footer-col"><h4>Wildlife</h4><a href="wildlife.html#owls">Owls</a><a href="wildlife.html#hummingbirds">Hummingbirds</a><a href="wildlife.html#loons">Loons</a><a href="wildlife.html#cranes">Cranes</a><a href="wildlife.html#india">India</a><a href="wildlife.html#kenya">Kenya</a></div>
     <div class="footer-col"><h4>Info</h4><a href="prints.html">Shop Prints</a><a href="search.html">Search</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 Lavin Photography. All rights reserved.</span><div class="social-links"><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></div></div>
+  <div class="footer-bottom"><span>© 2025 Lavin Photography. All rights reserved.</span><div class="social-links"><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></div></div>
 </footer>
+
 <script src="js/main.js"></script>
+<script>
+  // Pre-fill form from URL params (set by "Buy This Print" buttons on gallery pages)
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('image')) {
+    document.getElementById('image-ref').value = params.get('image');
+    document.getElementById('subject').value = 'Print Purchase Inquiry';
+    document.getElementById('hidden-subject').value = 'Print Inquiry: ' + params.get('image');
+    document.getElementById('message').placeholder = 'I\'m interested in a print of "' + params.get('image') + '". Please let me know available sizes and pricing.';
+  }
+
+  // Form submission handler — mailto fallback until Formspree is wired up
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    const formId = 'YOUR_FORM_ID';
+    if (formId === 'YOUR_FORM_ID') {
+      // Formspree not yet configured — use mailto fallback
+      e.preventDefault();
+      const fname = document.getElementById('fname').value;
+      const lname = document.getElementById('lname').value;
+      const subj = document.getElementById('subject').value;
+      const imgRef = document.getElementById('image-ref').value;
+      const msg = document.getElementById('message').value;
+      const body = [
+        'From: ' + fname + ' ' + lname,
+        imgRef ? 'Image: ' + imgRef : '',
+        '',
+        msg
+      ].filter(Boolean).join('\n');
+      window.location.href = 'mailto:contact@lavinphotography.com'
+        + '?subject=' + encodeURIComponent(subj)
+        + '&body=' + encodeURIComponent(body);
+    }
+    // If Formspree IS configured, the form submits normally
+  });
+</script>
 </body>
 </html>
